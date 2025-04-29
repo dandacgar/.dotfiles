@@ -1,0 +1,25 @@
+general.import = [
+    "~/.config/alacritty/themes/themes/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 15
+padding.y = 15
+
+decorations = "Buttonless"
+
+opacity = 0.9
+blur = false
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "Monofur Nerd Font Mono"
+
+size = 20
+
+[colors.primary]
+background = "#181818"
