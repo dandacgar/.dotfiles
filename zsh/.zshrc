@@ -43,7 +43,7 @@ FZF_ALT_C_COMMAND= source <(fzf --zsh)
 ### Commands ###
 
 ## Eza (better ls)
-alias ls="eza --icons=always"
+alias ls="eza -a --icons=always"
 
 ## Zoxide (better cd)
 eval "$(zoxide init zsh)"
