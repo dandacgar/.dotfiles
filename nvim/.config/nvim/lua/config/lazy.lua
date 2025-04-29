@@ -25,8 +25,13 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    { "jpalardy/vim-slime"},
+    { "jpalardy/vim-slime" },
+    { "vim-airline/vim-airline",
+    	dependencies = {
+	    {"vim-airline/vim-airline-themes"},
+    	},
+    },
+    { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

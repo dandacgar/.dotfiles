@@ -1,5 +1,7 @@
 {
   "catppuccin": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "vim-airline": { "branch": "master", "commit": "45003f9451d8038064ffe804cf8e8eb0f6a20210" },
+  "vim-airline-themes": { "branch": "master", "commit": "cda3b5ea087f7e301a3d4e61727108f66ba6dd20" },
   "vim-slime": { "branch": "main", "commit": "507107dd24c9b85721fa589462fd5068e0f70266" }
 }
