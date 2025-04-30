@@ -5,8 +5,12 @@ vim.call('plug#begin')
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug('https://github.com/nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
+Plug('https://github.com/jpalardy/vim-slime')
 vim.call('plug#end')
 
+vim.cmd[[
+let g:slime_target = "tmux"
+]]
 
 require("catppuccin").setup({
 	transparent_background = true,

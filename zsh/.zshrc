@@ -44,6 +44,7 @@ FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
 ## Eza (better ls)
 alias ls="eza -a --icons=always"
+alias la="ls -la"
 
 ## Zoxide (better cd)
 eval "$(zoxide init zsh)"
@@ -58,9 +59,6 @@ alias app="open -a"
 
 ## Close All Applications
 alias closeall="bash ~/.config/programs/closeall.sh"
-
-## Open tmux with Stata
-alias two="bash ~/.config/programs/tmux_two.sh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -77,3 +75,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+### Automatically Start tmux ###
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
