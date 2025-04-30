@@ -19,7 +19,7 @@ require("catppuccin").setup({
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'catppuccin',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -60,8 +60,6 @@ require('lualine').setup({
 
 vim.cmd.colorscheme "catppuccin-mocha"
 
-
-vim.g.airline_powerline_fonts=1
 -- Vim Commands and Such
 vim.wo.number = true
 vim.wo.relativenumber = true

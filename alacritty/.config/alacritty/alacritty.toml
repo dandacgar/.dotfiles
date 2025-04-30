@@ -11,13 +11,14 @@ padding.y = 15
 
 decorations = "Buttonless"
 
-opacity = 0.9
+opacity = 0.8
 blur = false
 
 option_as_alt = "Both"
 
 [font]
-normal.family = "Monofur Nerd Font Mono"
+normal = { family = "Monofur Nerd Font Mono", style = "Regular" }
+bold = { family = "Monofur Nerd Font Mono", style = "Regular" }
 
 size = 20
 
