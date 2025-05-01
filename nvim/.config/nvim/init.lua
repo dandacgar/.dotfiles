@@ -3,9 +3,9 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
-Plug('https://github.com/nvim-lualine/lualine.nvim')
+Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
-Plug('https://github.com/jpalardy/vim-slime')
+Plug('jpalardy/vim-slime')
 vim.call('plug#end')
 
 vim.cmd[[
@@ -39,15 +39,15 @@ require('lualine').setup({
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_c = {{'filename', path = 4,}},
+    lualine_x = {},
+    lualine_y = {'encoding', 'filetype'},
+    lualine_z = {'progress','location'}
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
+    lualine_c = {{'filename', path = 4,}},
     lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}
