@@ -2,24 +2,30 @@ local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
+-- Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('jpalardy/vim-slime')
+Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
 vim.call('plug#end')
 
 vim.cmd[[
 let g:slime_target = "tmux"
+xmap <c-c><CR> <Plug>SlimeRegionSend
+xmap <c-c><CR> <Plug>SlimeLineSend
 ]]
 
-require("catppuccin").setup({
+-- require("catppuccin").setup({
 	transparent_background = true,
+--})
+require('vscode').setup({
+	transparent = true,
 })
 
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'catppuccin',
+    theme = 'vscode',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -58,7 +64,7 @@ require('lualine').setup({
   extensions = {}
 })
 
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "vscode"
 
 -- Vim Commands and Such
 vim.wo.number = true
