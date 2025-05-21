@@ -40,7 +40,7 @@ done < <(
 
 for app in "${apps[@]}"; do
   if is_prompt_app "$app"; then
-    read -p "Did you save your work in "$app"? [y/N] " ans
+    read -p "Did you save your work in $app? [y/N] " ans
     if [[ ! $ans =~ ^[Yy] ]]; then
       to_skip+=("$app")
       continue

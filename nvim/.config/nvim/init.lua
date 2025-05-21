@@ -12,7 +12,6 @@ vim.call('plug#end')
 vim.cmd[[
 let g:slime_target = "tmux"
 xmap <c-c><CR> <Plug>SlimeRegionSend
-xmap <c-c><CR> <Plug>SlimeLineSend
 ]]
 
 -- require("catppuccin").setup({
