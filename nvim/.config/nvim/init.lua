@@ -2,7 +2,6 @@ local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
--- Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('jpalardy/vim-slime')
@@ -14,9 +13,6 @@ let g:slime_target = "tmux"
 xmap <c-c><CR> <Plug>SlimeRegionSend
 ]]
 
--- require("catppuccin").setup({
-	transparent_background = true,
---})
 require('vscode').setup({
 	transparent = true,
 })
