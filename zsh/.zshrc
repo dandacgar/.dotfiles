@@ -76,4 +76,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 ### Automatically Start tmux ###
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session -n "Main" && exit;}
