@@ -15,3 +15,10 @@ endfunction
 
 call <SID>StataStartUp()
 let g:slime_dont_ask_default = 1
+
+augroup CloseOnExit
+    autocmd!
+    autocmd VimLeave * if exists('b:vimslime_target') && !empty(b:vimslime_target) |
+        \ call system("tmux kill-pane -t " .. b:vimslime_target) |
+    \ endif
+augroup END
