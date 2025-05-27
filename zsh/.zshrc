@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export PATH="$PATH:$HOME/.local/bin"
+
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -36,6 +38,7 @@ export PATH
 path=('/Applications/Stata/StataMP.app/Contents/MacOS/' $path)
 export PATH
 
+
 ## Initialize fzf (search)
 
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
@@ -57,9 +60,6 @@ alias vim="nvim"
 ## Open an Application
 alias app="open -a"
 
-## Close All Applications
-alias closeall="bash ~/.config/programs/closeall.sh"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/bdgar/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -77,3 +77,4 @@ unset __conda_setup
 
 ### Automatically Start tmux ###
 [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session -n "Main" && exit;}
+

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/bdgar/Documents/Dingel/projecttemplate/logbook/entries'
 let g:netrw_dirhist_3='/Users/bdgar/.dotfiles/nvim/.local/share/nvim/plugged/vim-slime/ftplugin/stata'
 let g:netrw_dirhist_2='/Users/bdgar/.dotfiles/nvim/.local/share/nvim/plugged/vim-slime'
 let g:netrw_dirhist_1='/Users/bdgar/.dotfiles/alacritty/.config/alacritty/themes'

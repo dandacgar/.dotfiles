@@ -1,0 +1,2 @@
+#!/bin/bash
+/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp $@
