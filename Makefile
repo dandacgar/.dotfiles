@@ -7,4 +7,4 @@ all:
 .PHONY: update
 
 update: 
-	./bin/.local/bin/update.sh
+	./bin/.local/bin/dotfiles-update.sh
