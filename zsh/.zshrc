@@ -38,12 +38,9 @@ export PATH
 path=('/Applications/Stata/StataMP.app/Contents/MacOS/' $path)
 export PATH
 
-
 ## Initialize fzf (search)
 
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
-
-### Commands ###
 
 ## Eza (better ls)
 alias ls="eza -a --icons=always"
