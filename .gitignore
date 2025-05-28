@@ -1,2 +1,4 @@
 .DS_Store
 .netrwhist
+
+/nvim/.local/share/plugged

@@ -6,6 +6,7 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('jpalardy/vim-slime')
 Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
+Plug('nvim-treesitter/nvim-treesitter', { ['as'] = 'nvim-treesitter' })
 vim.call('plug#end')
 
 vim.cmd[[
@@ -58,6 +59,29 @@ require('lualine').setup({
   inactive_winbar = {},
   extensions = {}
 })
+
+require('nvim-treesitter.configs').setup {
+ensure_installed = { 
+	"c", 
+	"bash", 
+	"lua", 
+	"vim", 
+	"vimdoc", 
+	"query", 
+	"markdown",
+	"markdown_inline",
+	"latex",
+	"make",
+	"r"},
+	sync_install = false,
+	auto_install = true,
+	ignore_install = { "javascript" },
+	highlight = {
+		enable = true,
+		disable = { "c", "rust" },
+	additional_vim_regex_highlighting = false,
+  },
+}
 
 vim.cmd.colorscheme "vscode"
 

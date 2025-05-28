@@ -12,10 +12,19 @@ brew bundle dump --force
 
 # Stow 
 
+echo -e "\033[34m==>\033[0m Stowing Dotfiles..."
+
 dotfile_path="$HOME/.dotfiles"
 cd "$dotfile_path"
 
 find -E . -type d -depth 1 -regex "^\./[^.].*" | sed 's?^\./??' | xargs -n 1 stow
+
+# Vim Plugins
+
+echo -e "\033[34m==>\033[0m Updating Vim Plugins..."
+
+nvim -es -u ~/.config/nvim/init.lua +PlugUpdate +qa
+nvim -es -u ~/.config/nvim/init.lua +PlugClean! +qa
 
 # Git
 
