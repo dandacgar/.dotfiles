@@ -1,6 +1,7 @@
 local vim = vim
 local Plug = vim.fn['plug#']
 
+-- Install Vim Plugins
 vim.call('plug#begin')
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
@@ -83,8 +84,14 @@ ensure_installed = {
   },
 }
 
-vim.cmd.colorscheme "vscode"
-
+-- All .tex files should be filetype .tex
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = {"*.tex"},
+  callback = function()
+    vim.bo.filetype = "tex"
+  end,
+})
 -- Vim Commands and Such
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.cmd.colorscheme "vscode"
