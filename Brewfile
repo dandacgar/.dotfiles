@@ -1,4 +1,3 @@
-tap "r-lib/rig"
 brew "fontconfig"
 brew "eza"
 brew "fzf"
