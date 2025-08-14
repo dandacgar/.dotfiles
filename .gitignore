@@ -1,4 +1,5 @@
 .DS_Store
 .netrwhist
 .gitconfig
+.gittoken
 /nvim/.local/share/nvim/plugged/
