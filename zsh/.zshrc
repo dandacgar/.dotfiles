@@ -63,7 +63,6 @@ alias bb="cd ../.."
 alias lsb="ls .."
 alias lsbb="ls ../.."
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/bdgar/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
