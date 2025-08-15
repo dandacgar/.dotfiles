@@ -37,13 +37,13 @@
   # Zsh >= 5.1 is required.
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Prompt colors.
+  # Prompt colors. (Miasma-based but brighter, 08/14/25)
   local grey='242'
-  local red='#FF5C57'
-  local yellow='#F3F99D'
-  local blue='#57C7FF'
-  local magenta='#FF6AC1'
-  local cyan='#9AEDFE'
+  local red='#7C684F'
+  local yellow='#C48762'
+  local blue='#909C59'
+  local magenta='#C89269'
+  local cyan='#D6BB7F'
   local white='#F1F1F0'
 
   # Left prompt segments.
