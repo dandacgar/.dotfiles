@@ -279,6 +279,22 @@ hs.hotkey.bind(hyper, 'm', function()
     end
 end)
 
+hs.hotkey.bind(hyper, 's', function()
+    local app = hs.application.find("Skim", true)
+
+    if app == nil then
+        hs.application.launchOrFocus("Skim")
+    elseif app:isFrontmost() then
+        app:hide()
+    else
+        local win = app:mainWindow()
+
+        local activeSpaces = spaces.activeSpaces()
+
+        spaces.moveWindowToSpace(win:id(), spaces.activeSpaceOnScreen())
+        win:focus()
+    end
+end)
 -----------------------------------------------
 -- Reload config on write
 -----------------------------------------------
