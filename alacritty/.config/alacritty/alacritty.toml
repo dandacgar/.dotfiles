@@ -24,3 +24,8 @@ size = 20
 
 [colors.primary]
 background = "#222222"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;2u"
+key = "Return"
+mods = "Shift"

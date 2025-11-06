@@ -10,9 +10,14 @@ Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
 Plug('nvim-treesitter/nvim-treesitter', { ['as'] = 'nvim-treesitter' })
 vim.call('plug#end')
 
+-- vim.cmd[[
+-- let g:slime_target = "tmux"
+-- xmap <c-c><CR> <Plug>SlimeRegionSend
+-- ]]
+
 vim.cmd[[
 let g:slime_target = "tmux"
-xmap <c-c><CR> <Plug>SlimeRegionSend
+   xmap <S-CR> <Plug>SlimeRegionSend
 ]]
 
 require('vscode').setup({
