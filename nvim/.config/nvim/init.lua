@@ -7,13 +7,8 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('jpalardy/vim-slime')
 Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
-Plug('nvim-treesitter/nvim-treesitter', { ['as'] = 'nvim-treesitter' })
+Plug('nvim-treesitter/nvim-treesitter', { ['as'] = 'nvim-treesitter' , ['branch'] = 'master'})
 vim.call('plug#end')
-
--- vim.cmd[[
--- let g:slime_target = "tmux"
--- xmap <c-c><CR> <Plug>SlimeRegionSend
--- ]]
 
 vim.cmd[[
 let g:slime_target = "tmux"
