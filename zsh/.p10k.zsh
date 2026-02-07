@@ -64,8 +64,8 @@
     # =========================[ Line #1 ]=========================
     command_execution_time    # previous command duration
     virtualenv                # python virtual environment
-    context                   # user@host
-    time                      # current time
+    # context                   # user@host
+    # time                      # current time
     # =========================[ Line #2 ]=========================
     newline                   # \n
   )
@@ -111,7 +111,7 @@
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_CONTENT_EXPANSION=
 
   # Show previous command duration only if it's >= 5s.
-  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=5
+  typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=10
   # Don't show fractional seconds. Thus, 7s rather than 7.3s.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=0
   # Duration format: 1d 2h 3m 4s.
@@ -154,7 +154,7 @@
   # Grey current time.
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=$grey
   # Format for the current time: 09:51:02. See `man 3 strftime`.
-  typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%I:%M:%S %p}'
+  typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%I:%M %p}'
   # If set to true, time will update when you hit enter. This way prompts for the past
   # commands will contain the start times of their commands rather than the end times of
   # their preceding commands.
