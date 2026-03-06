@@ -38,6 +38,9 @@ export PATH
 path=('/Applications/Stata/StataMP.app/Contents/MacOS/' $path)
 export PATH
 
+path=('/Applications/MATLAB_R2025b.app/bin/' $path)
+export PATH
+
 ## Initialize fzf (search)
 
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
